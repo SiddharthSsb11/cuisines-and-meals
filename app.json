@@ -1,4 +1,5 @@
 {
   "name": "mealsCuisine",
-  "displayName": "mealsCuisine"
+  "displayName": "mealsCuisine",
+  "orientation": "portrait"
 }
