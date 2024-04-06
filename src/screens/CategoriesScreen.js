@@ -3,8 +3,10 @@ import {CATEGORIES} from '../data/dummy-data';
 import CategoryGridTitle from '../components/CategoryGridTitle';
 
 const CategoriesScreen = ({navigation}) => {
-  const categoryPressHandler = () => {
-    navigation.navigate('MealsOverview');
+  const categoryPressHandler = item => {
+    navigation.navigate('MealsOverview', {
+      categoryId: item.id
+    });
   };
 
   const renderCategoryItem = ({item}) => {
@@ -12,7 +14,7 @@ const CategoriesScreen = ({navigation}) => {
       <CategoryGridTitle
         title={item.title}
         color={item.color}
-        onPress={categoryPressHandler}
+        onPress={categoryPressHandler.bind(this, item)}
       />
     );
   };
