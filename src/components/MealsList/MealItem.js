@@ -1,6 +1,6 @@
 import {View, Pressable, Text, Image} from 'react-native';
 import styles from './MealItem.styles';
-import MealDetails from './MealDetails';
+import MealDetails from '../MealDetails';
 
 const MealItem = ({
   title,
