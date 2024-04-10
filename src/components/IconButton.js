@@ -7,9 +7,9 @@ const IconButton = ({onPress, icon, color}) => {
     <View style={styles.mainContainer}>
       <Pressable
         onPress={onPress}
-        style={({pressed}) => {
-          pressed && styles.pressed;
-        }}>
+        style={({pressed}) => ({
+          opacity: pressed ? 0.8 : 0.2 // Update opacity based on pressed state
+        })}>
         <View style={styles.iconContainer}>
           <Icon name={icon} size={24} color="white" />
         </View>
